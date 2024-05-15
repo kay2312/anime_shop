@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    background-image: url(image/background2.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+.header {
+    /* background-color: #EEEDEB; */
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Задано вище значення, ніж у ваших інших елементів */
+}
+
+.container {
+    margin-left: 60px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "Comic Neue", cursive;
+}
+
+.header-line {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    color: black;
+    text-decoration: none; /*без підкреслення посилання */
+    font-size: 20px;
+    margin-left: 15px;
+    padding-left: 30px;
+}
+
+.nav-item:hover,
+.nav-item:active {
+    text-decoration: underline;
+}
+
+.nav-image img{
+    margin-left: 35px;
+    width: 40px;
+    height: 40px;
+}
+
+.header-logo {
+    color: #088178;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#close img{
+    display: none;
+}
+
+
+/* ----------------------------------- */
+
+#product1 {
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+}
+
+#product1 .pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#product1 .pro {
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #CCE7D0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#product1 .pro:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.35);
+}
+
+#product1 .pro span {
+    color: #606063;
+    font-size: 14px;
+}
+
+#product1 .pro img {
+    height: 300px;
+    border-radius: 20px;
+}
+
+#product1 .pro h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#product1 .pro h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #4f4e4e;
+}
+
+#product1 p {
+    font-size: 17px;
+}
+
+
+#product1 .pro .shopping-cart img {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 55px;
+    background-color: #E8F6EA;
+    color: #088178;
+    border: 1px solid #CCE7D0;
+    bottom: 20px;
+    right: 10px;
+}
+
+/* ------------------------- */
+
+.shop-info {
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+    background-color: #E3E6F3;
+    padding: 15px;
+}
+
+.shop-info h1 {
+    color: #088178;
+}
+
+.shop-info p {
+    font-size: 17px;
+}
+
+.footer {
+    background-color: #E3E6F3;
+    padding: 5px;
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer h3 {
+    color: #088178;
+}
+
+.contact-info p {
+    margin: 0 20px;
+}
+
+
+
+/* -------------------Адаптивність для планшетів, телефонів------------------------- */
+
+@media (max-width:1050px) {
+    .nav {
+        margin-left: auto;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        width: 220px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s; /*час протягом якого відбуватиметься зміна*/
+    }
+
+    #nav.active{
+        right: 0px;
+    }
+
+    #nav a {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 45px;
+    }
+
+    #mobile a {
+        text-decoration: none; 
+    }
+
+    #close img{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        height: 25px;
+    }
+}
+
+
+/* --------------------Сторінка магазину------------------------- */
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    text-align: center;
+    line-height: 40px; 
+    margin: 5px; 
+    color: black; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-family: "Comic Neue", cursive;
+}
+
+.links .standart {
+    background-color: lightblue; 
+}
+
+/* .links a.arrow {
+    width: auto;
+    padding: 0 10px;
+} */
+
+.links .section {
+    background-color: rgb(101, 205, 239); 
+}
+
+.links .links-goods {
+    background-color: lightblue; 
+    width: 220px;
+}
+
+.underline:hover,
+.underline:active {
+    text-decoration: underline;
+}
