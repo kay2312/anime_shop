@@ -1,0 +1,71 @@
+/* --------------------Фільтрація продукції------------------------- */
+.filter-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.price-filter,
+.product-type-filter {
+    margin-bottom: 15px;
+    display: inline-block; 
+    width: 45%;
+    text-align: left;  
+}
+
+.price-filter h3,
+.product-type-filter h3 {
+    margin-top: 0;
+}
+
+.price-filter ul,
+.product-type-filter ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-filter li,
+.product-type-filter li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.price-filter input[type="checkbox"],
+.product-type-filter input[type="checkbox"] {
+    display: none;
+}
+
+.price-filter label,
+.product-type-filter label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Стилі для зміни кольору мітки при наведенні */
+.price-filter label:hover,
+.product-type-filter label:hover {
+    background-color: #f0f0f0;
+}
+
+/* Стилі для зміни кольору мітки та фону при виборі чекбоксу */
+.price-filter input[type="checkbox"]:checked + label,
+.product-type-filter input[type="checkbox"]:checked + label {
+    background-color: lightblue;
+    /* color: #fff; */
+}
+
+.shop-filter {
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+    background-color: #E3E6F3;
+    padding-top: 30px;
+}
+
+.shop-filter h3 {
+    color: #088178;
+}
