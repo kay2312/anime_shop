@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -12,10 +13,10 @@
     <div class='header'>
         <div class="container">
             <div class='header-line'>
-                <p class="header-logo">AnimeShop</p>
+                <p class="header-color">AnimeShop</p>
                 <div id="nav" class='nav'>
                     <a class="nav-item" href="index.html">Головна</a>
-                    <a class="nav-item" href="goods.html">Товари</a>
+                    <a class="nav-item header-color" href="goods.html">Товари</a>
                     <a class="nav-item" href="#contact">Контакти</a>
                 
                     <div class="nav-image">
@@ -45,250 +46,713 @@
         </div>
     </div>
 
-    <section id="product1">
-        <br><br>
-        <h2 id="goods">Товари в продажі</h2>
-        <p>Фігурки, Манга, Картини, Дакімакури на будь-який смак.</p>
-        <div class="pro-container">
-            <!-- 1 -->
-            <div class="pro">
-                <img src="./image/manga_porcelain_doll.jpg" alt="">
-                <div class="des">
-                    <span>манга</span>
-                    <h5>Ця порцелянова лялечка закохалася</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                    </div>
-                    <h4>259 грн</h4>
-                </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
+    <div class="shop-body">
+        <section class="filter-section shop-filter">
+            <!-- Фільтр за ціною -->
+            <div class="price-filter">
+                <h3>Ціна</h3>
+                <ul>
+                    <li><input type="checkbox" id="price-100-500" name="price" value="100-500"><label for="price-100-500">100-500</label></li>
+                    <li><input type="checkbox" id="price-500-1000" name="price" value="500-1000"><label for="price-500-1000">500-1000</label></li>
+                    <li><input type="checkbox" id="price-1000-plus" name="price" value="1000-plus"><label for="price-1000-plus">1000+</label></li>
+                </ul>
             </div>
-            <!-- 2 -->
-            <div class="pro">
-                <img src="./image/manga_tomie.png" alt="">
-                <div class="des">
-                    <span>манга</span>
-                    <h5>Томіе</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
-                    </div>
-                    <h4>179 грн</h4>
-                </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
+        
+            <!-- Фільтр за типом продукції -->
+            <div class="product-type-filter">
+                <h3>Тип продукції</h3>
+                <ul>
+                    <li><input type="checkbox" id="type-manga" name="type" value="manga"><label for="type-manga">Манга</label></li>
+                    <li><input type="checkbox" id="type-figure" name="type" value="figure"><label for="type-figure">Фігурки</label></li>
+                    <li><input type="checkbox" id="type-painting" name="type" value="painting"><label for="type-painting">Картини</label></li>
+                    <li><input type="checkbox" id="type-dakimakura" name="type" value="dakimakura"><label for="type-dakimakura">Дакімакури</label></li>
+                </ul>
             </div>
-            <!-- 3 -->
-            <div class="pro">
-                <img src="./image/manga_dark_butler.png" alt="">
-                <div class="des">
-                    <span>манга</span>
-                    <h5>Темний дворецький</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
+        </section>
+        
+        <section id="product1">
+            <br>
+            <h2 id="goods">Товари в продажі</h2>
+            <p>Фігурки, Манга, Картини, Дакімакури на будь-який смак.</p>
+            <div class="pro-container">
+                <!-- 1 -->
+                <div class="pro one-page price-100-500 type-manga">
+                    <img src="./image/manga_porcelain_doll.jpg" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Ця порцелянова лялечка закохалася</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>259 грн</h4>
                     </div>
-                    <h4>259 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 4 -->
-            <div class="pro">
-                <img src="./image/figure_zenitsu.jpg" alt="">
-                <div class="des">
-                    <span>фігурка</span>
-                    <h5>Зеніцу Агацума</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
+                <!-- 2 -->
+                <div class="pro one-page price-100-500 type-manga">
+                    <img src="./image/manga_tomie.png" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Томіе</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>179 грн</h4>
                     </div>
-                    <h4>779 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 5 -->
-            <div class="pro">
-                <img src="./image/figure_tanjiro.jpg" alt="">
-                <div class="des">
-                    <span>фігурка</span>
-                    <h5>Танджіро Камадо</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
+                <!-- 3 -->
+                <div class="pro one-page price-100-500 type-manga">
+                    <img src="./image/manga_dark_butler.png" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Темний дворецький</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>259 грн</h4>
                     </div>
-                    <h4>449 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 6 -->
-            <div class="pro">
-                <img src="./image/picture_sasuke.jpg" alt="">
-                <div class="des">
-                    <span>картина</span>
-                    <h5>Саске Учіха</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
+                <!-- 4 -->
+                <div class="pro one-page price-500-1000 type-figure">
+                    <img src="./image/figure_zenitsu.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Зеніцу Агацума</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>779 грн</h4>
                     </div>
-                    <h4>599 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 7 -->
-            <div class="pro">
-                <img src="./image/dakimakura_shinobu.jpg" alt="">
-                <div class="des">
-                    <span>дакімакура</span>
-                    <h5>Шинобу Кочо</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
+                <!-- 5 -->
+                <div class="pro one-page price-100-500 type-figure">
+                    <img src="./image/figure_tanjiro.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Танджіро Камадо</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>449 грн</h4>
                     </div>
-                    <h4>890 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 8 -->
-            <div class="pro">
-                <img src="./image/dakimakura_spy_family.jpg" alt="">
-                <div class="des">
-                    <span>дакімакура</span>
-                    <h5>Сім'я Шпигунів</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
+                <!-- 6 -->
+                <div class="pro one-page price-500-1000 type-painting">
+                    <img src="./image/picture_sasuke.jpg" alt="">
+                    <div class="des">
+                        <span>картина</span>
+                        <h5>Саске Учіха</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>599 грн</h4>
                     </div>
-                    <h4>1190 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 9 -->
-            <div class="pro">
-                <img src="./image/picture_naruto_team.jpg" alt="">
-                <div class="des">
-                    <span>картина</span>
-                    <h5>Персонажі Наруто</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
+                <!-- 7 -->
+                <div class="pro one-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_shinobu.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Шинобу Кочо</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>890 грн</h4>
                     </div>
-                    <h4>490 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 10 -->
-            <div class="pro">
-                <img src="./image/picture_demon_slayer.jpg" alt="">
-                <div class="des">
-                    <span>картина</span>
-                    <h5>Клинок, що знищує демонів</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
+                <!-- 8 -->
+                <div class="pro one-page price-1000-plus type-dakimakura">
+                    <img src="./image/dakimakura_spy_family.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Сім'я Шпигунів</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>1190 грн</h4>
                     </div>
-                    <h4>490 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 11 -->
-            <div class="pro">
-                <img src="./image/manga_star_child.jpg" alt="">
-                <div class="des">
-                    <span>манга</span>
-                    <h5>Зіркове дитя</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>☆</i>
+                <!-- 9 -->
+                <div class="pro one-page price-100-500 type-painting">
+                    <img src="./image/picture_naruto_team.jpg" alt="">
+                    <div class="des">
+                        <span>картина</span>
+                        <h5>Наруто</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>490 грн</h4>
                     </div>
-                    <h4>259 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
-            </div>
-            <!-- 12 -->
-            <div class="pro">
-                <img src="./image/dakimakura_toji_fushiguro.jpg" alt="">
-                <div class="des">
-                    <span>дакімакура</span>
-                    <h5>Тодзі Фушигуро</h5>
-                    <div class="star">
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
-                        <i>&#11088;</i>
+                <!-- 10 -->
+                <div class="pro one-page price-100-500 type-painting">
+                    <img src="./image/picture_demon_slayer.jpg" alt="">
+                    <div class="des">
+                        <span>картина</span>
+                        <h5>Клинок, що знищує демонів</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>490 грн</h4>
                     </div>
-                    <h4>1090 грн</h4>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
                 </div>
-                <a href="#1"><i class="shopping-cart">
-                    <img src="./image/basket.png" alt="basket">
-                </i></a>
+                <!-- 11 -->
+                <div class="pro one-page price-100-500 type-manga">
+                    <img src="./image/manga_star_child.jpg" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Зіркове дитя</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>259 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 12 -->
+                <div class="pro one-page price-1000-plus type-dakimakura">
+                    <img src="./image/dakimakura_toji_fushiguro.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Тодзі Фушигуро</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1090 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 13 -->
+                <div class="pro two-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_eren_yega.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Ерен Єгер</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 14 -->
+                <div class="pro two-page price-100-500 type-manga">
+                    <img src="./image/manga_jujutsu_kaisen.jpg" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Магічна битва</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>179 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 15 -->
+                <div class="pro two-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_tokyo_ghoul.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Токійський гуль</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 16 -->
+                <div class="pro two-page price-100-500 type-manga">
+                    <img src="./image/manga_attack_on_titan.jpg" alt="">
+                    <div class="des">
+                        <span>манга</span>
+                        <h5>Атака титанів</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>179 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 17 -->
+                <div class="pro two-page price-100-500 type-figure">
+                    <img src="./image/figure_nezuko.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Незуко Камадо</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>449 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 18 -->
+                <div class="pro two-page price-1000-plus type-figure">
+                    <img src="./image/figure_denji.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Денджі</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1599 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 19 -->
+                <div class="pro two-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_suzuya_juzo.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Сузуя Джузо</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>790 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 20 -->
+                <div class="pro two-page price-1000-plus type-figure">
+                    <img src="./image/figure_makima.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Макіма</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1499 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 21 -->
+                <div class="pro two-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_stray_dogs.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Бродячі пси</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 22 -->
+                <div class="pro two-page price-500-1000 type-figure">
+                    <img src="./image/figure_kaneki_ken.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Канекі Кен</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>649 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 23 -->
+                <div class="pro two-page price-1000-plus type-figure">
+                    <img src="./image/figure_power.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Павер</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1499 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 24 -->
+                <div class="pro two-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_kakashi_sasuke.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Какаші і Саске</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 25 -->
+                <div class="pro three-page price-1000-plus type-figure">
+                    <img src="./image/figure_aki.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Акі</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1099 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 26 -->
+                <div class="pro three-page price-500-1000 type-figure">
+                    <img src="./image/figure_sanemi.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Санемі</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>549 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 27 -->
+                <div class="pro three-page price-100-500 type-figure">
+                    <img src="./image/figure_muichiro_tokito.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Муічіро Токіто</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>449 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 28 -->
+                <div class="pro three-page price-1000-plus type-figure">
+                    <img src="./image/figure_giyu_tomioka.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Гію Томіока</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1199 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 29 -->
+                <div class="pro three-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_obito.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Обіто Учиха</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 30 -->
+                <div class="pro three-page price-1000-plus type-dakimakura">
+                    <img src="./image/dakimakura_madara.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Мадара</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1199 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 31 -->
+                <div class="pro three-page price-500-1000 type-figure">
+                    <img src="./image/figure_shinobu.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Шинобу Кочо</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>549 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 32 -->
+                <div class="pro three-page price-1000-plus type-dakimakura">
+                    <img src="./image/dakimakura_sakura.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Сакура</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>1199 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 33 -->
+                <div class="pro three-page price-500-1000 type-dakimakura">
+                    <img src="./image/dakimakura_orochimaru.jpg" alt="">
+                    <div class="des">
+                        <span>дакімакура</span>
+                        <h5>Орочімару</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>890 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 34 -->
+                <div class="pro three-page price-500-1000 type-figure">
+                    <img src="./image/figure_akaza.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Аказа</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                        </div>
+                        <h4>849 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
+                <!-- 35 -->
+                <div class="pro three-page price-500-1000 type-figure">
+                    <img src="./image/figure_inosuke.jpg" alt="">
+                    <div class="des">
+                        <span>фігурка</span>
+                        <h5>Іноске</h5>
+                        <div class="star">
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>&#11088;</i>
+                            <i>☆</i>
+                        </div>
+                        <h4>549 грн</h4>
+                    </div>
+                    <a href="#1"><i class="shopping-cart">
+                        <img src="./image/basket.png" alt="basket">
+                    </i></a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="links">
-        <a href="goods.html" class="section underline"><b>1</b></a>
-        <a href="goods_2.html" class="standart underline"><b>2</b></a>
-        <a href="goods_3.html" class="standart underline"><b>3</b></a>
-        <!-- <a href="#" class="standart arrow">➜</a> -->
-    </section>
+        <!-- <section class="links">
+            <ul class list>
+                <li class="standart section underline" data-id="one-page"><b>1</b></li>
+                <li class="standart underline" data-id="two-page"><b>2</b></li>
+                <li class="standart underline" data-id="three-page"><b>3</b></li>
+            </ul>
+        </section> -->
 
-    <p><br><br><br><br></p>
+        <p><br><br><br><br></p>
+    </div>
 
     <footer id="contact" class="footer">
         <h3>Завжди з вами на зв'язку</h3>
@@ -299,5 +763,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="filter.js"></script>
+    <!-- <script src="page.js"></script> -->
 </body>
 </html>
