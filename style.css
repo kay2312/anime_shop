@@ -16,6 +16,11 @@ body {
     z-index: 1000; /* Задано вище значення, ніж у ваших інших елементів */
 }
 
+.shop-body {
+    min-height: 100vh;
+}
+
+
 .container {
     margin-left: 60px;
     font-weight: 600;
@@ -57,7 +62,7 @@ body {
     height: 40px;
 }
 
-.header-logo {
+.header-color {
     color: #088178;
 }
 
@@ -243,6 +248,19 @@ body {
     justify-content: center;
 }
 
+.links li {
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    text-align: center;
+    line-height: 40px; 
+    margin: 5px; 
+    color: black; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-family: "Comic Neue", cursive;
+}
+
 .links a {
     display: inline-block;
     width: 40px; 
@@ -277,4 +295,8 @@ body {
 .underline:hover,
 .underline:active {
     text-decoration: underline;
+}
+
+.section {
+    background-color: rgb(101, 205, 239); 
 }
