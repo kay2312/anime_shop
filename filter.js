@@ -7,23 +7,6 @@ const typeCheckboxes = document.querySelectorAll('.product-type-filter input[typ
 let selectedPrice = [];
 let selectedTypes = [];
 
-// Функція для налаштування видимості елементів за класом
-function setVisibilityByClass(className) {
-    items.forEach(item => {
-        if (item.classList.contains(className)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-function setBlockByClass() {
-    items.forEach(item => {
-        item.style.display = 'block';
-    });
-}
-
 // Функція для фільтрації за ціною
 function filterByPrice(priceValue, isChecked) {
     if (isChecked) {
